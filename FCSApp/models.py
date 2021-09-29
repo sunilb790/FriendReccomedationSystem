@@ -18,4 +18,4 @@ class FriendRelation(models.Model):
     Friend2 = models.ForeignKey(Customer, on_delete=models.CASCADE,related_name='Friend2_set')
     
     def __str__(self):
-        return f'{self.Friend1.user.username} has friendship with {self.Friend1.user.username}'
+        return f'{self.Friend1.user.username} has friendship with {self.Friend2.user.username}'
