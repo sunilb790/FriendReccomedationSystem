@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'css/jQuery.passwordStrength.js'  %}"></script>
+    <script>
+        function func(){
+            location.href='/login';
+        }
+    </script>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <span class="sp"><abbr title="Friend Recommendation System">FRS</abbr> </span>
+        <ul>
+            <li> <a href="/login" >Home</a> </li>
+            <li> <a href="#service" >Services</a> </li>
+            <li> <a href="#about" >About</a> </li>
+            <li> <a href="#contact">Contact</a> </li>
+            <button class="btn1" onclick="func()">Sign In</button>
+        </ul>
+    </nav>
+        {% for message in messages %}
+        <p style="background-color: rgba(255, 0, 76, 0.527);color:white; margin: 0px; padding: 5px 20px; position: relative;">{{message}}</p>
+        {% endfor %}
+    <div class="container">
+        <h2 class="under">Sign Up</h2>
+        <form action="register" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="e.g: John" required title="Please enter username"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="e.g: example@gmaill.com" required title="Please enter your email"></br>
+            
+            <label for="password">Password</label>
+            <div class="progress">
+                <div class="progress-bar role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            <input type="password" name="password" id="password" placeholder="..........." required title="Please enter a strong password">
+            <br>
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" placeholder="..........." required title="Confirm Password">
+            <br><br>
+            <button type="submit" class="btn2">Submit</button>
+        </form>
+        <script type="text/javascript">
+            $(function() {
+                $("#password").passwordStrength();
+            });
+        </script>
+    </div>
+</body>
+</html>

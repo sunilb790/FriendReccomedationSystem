@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script>
+        var btn=document.getElementsByClassName('btn1');
+        function func(){
+            location.href="/register"
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar" style="margin-bottom: 0px;">
+        <span><abbr title="Friend Recommendation System">FRS</abbr> </span>
+        <ul>
+            <li> <a href="/">Home</a> </li>
+            <li> <a href="#service">Services</a> </li>
+            <li> <a href="#about">About</a> </li>
+            <li> <a href="#contact">Contact</a> </li>
+            <button class="btn1" onclick="func()">SignUp</button>
+        </ul>
+    </nav>
+    {% if error %}
+    <p style="background-color:rgba(255, 94, 0, 0.589); margin:0px; padding: 10px; color: wheat;">{{error}}</p>
+    {% endif%}
+    <div class="container" style="margin-top: 40px;">
+        <h2 class="under">Sign In</h2>
+        <form action="login" method="POST" autocomplete="off">
+
+            {% csrf_token %}
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="e.g: example@gmaill.com" required title="Please enter your email"></br>
+            
+            <label for="password">Password</label>
+            <div class="progress">
+                <div class="progress-bar role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            <input type="password" name="password" id="password" placeholder="..........." required title="Please enter a strong password">
+            <br><br>
+            <button type="submit" class="btn2">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
