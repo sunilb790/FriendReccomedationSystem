@@ -19,3 +19,16 @@ class FriendRelation(models.Model):
     
     def __str__(self):
         return f'{self.Friend1.user.username} has friendship with {self.Friend2.user.username}'
+
+class Interest(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    photography = models.CharField(max_length=100)
+    Healthansfitness = models.CharField(max_length=150)
+    Mentorship = models.CharField(max_length=200)
+    Gardening = models.CharField(max_length=200)
+    Sports = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
