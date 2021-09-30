@@ -1,0 +1,179 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: url("./nasa.jpeg") center center/cover;
+    height: 100vh;
+}
+span,abbr{
+    font-weight: bold;
+    font-size: 26px;
+    text-shadow: 0 0 3px #ffbb00, 0 0 5px #ff0000;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar{
+    margin-left: 0px;
+    background-color: rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0,0.7);
+    padding: 20px;
+    border-bottom: 2px solid yellow;
+}
+ul{
+    display: inline;
+    margin: 20px;
+    margin-left: 0px;
+    padding: 25px;
+    top: 10px;
+}
+.navbar ul li{
+    display: inline;
+    list-style: none;
+    margin-left: 5px;
+    width: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+a{
+    padding: 15px;
+    text-decoration: none;
+}
+
+    .navbar a:link {
+        color: red;
+        padding: 20px;
+      }
+      
+      /* visited link */
+      a:visited {
+        color: tomato;
+      }
+      
+      /* mouse over link */
+    .navbar a:hover {
+        color: white;
+        background-color: rgba(240, 248, 255, 0.219);
+        border-radius: 10px;
+      }
+      
+      /* selected link */
+      a:active {
+        color: blue;
+      }
+      .btn1{
+          float: right;
+          padding: 8px;
+          width: 100px;
+          margin-right: 21px;
+          background-color: rgba(22, 182, 182, 0.692);
+          box-shadow: 0px 8px -10px rgb(55, 44, 22);
+          border: 2px solid grey;
+          cursor: pointer;
+          color: white;
+          border-radius: 3px;
+          transition-duration:0.1s ;
+      }
+      .btn1:hover{
+          box-shadow: 0px 0px 20px rgba(22, 182, 182, 0.692);
+      }
+    .container{
+        display: block;
+        width: 630px;
+        height: 430px;
+        margin: auto;
+        margin-top: 50px;
+        border: 2px solid rgba(255, 192, 203, 0.664);
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    background-color: rgb(0, 0, 0,0.7);
+    box-shadow: 0px 40px 40px rgb(0, 0, 0);
+    }
+    .under{
+        text-align: center;
+        color: #40d3ea;
+    }
+    .container form{
+        margin-top:70px ;
+       
+    }
+    .container form input{
+        display: block;
+        background: #000;
+        width: 500px;
+        margin: auto;
+        height: 15px;
+        padding: 8px;
+        color: #00ff0d;
+        border: 2px solid aliceblue;
+        border-radius: 3px;
+        box-shadow: 0px 8px 10px -10px rgb(0, 0, 0);
+        transition-duration:0.1s ;
+    }
+    .container form input:hover{
+        box-shadow: 0px 0px 20px rgba(150, 22, 182, 0.692); ;
+    }
+    .container form label{
+        display: block;
+        width: 500px;
+        margin: auto;
+        padding: 3px;
+        color: #fff;
+
+    }
+    .password-strength-indicator{
+        margin-top: 3px;
+        font-size: 12px;
+        display: inline-block;
+        height: 15px;
+        min-width: 20%;
+        text-align: center;
+        transition: 1s;
+        margin: 0px 56px;
+        color: #fff;
+    }
+    .password-strength-indicator.very-weak{
+        background: #cf0000;
+        width: 16%;
+   
+    }
+    .password-strength-indicator.weak{
+        background: #f6891f;
+        width: 32%;
+       
+    }
+    .password-strength-indicator.mediocre{
+        background: #eeee00;
+        width: 48%;
+    
+    }
+    .password-strength-indicator.strong{
+        background: #99ff33;
+        width: 64%;
+    }
+    .password-strength-indicator.very-strong{
+        background: #22cf00;
+        width: 82%;
+    }
+    .btn2{
+        display: block;
+        width: 520px;
+        border: 2px solid grey;
+       margin: auto;
+       font-size: 15px;
+       padding: 8px;
+       color: rgb(0, 0, 0);
+       border-radius:3px ;
+       font-weight: bold;
+       background: linear-gradient(to right, #4CAF50,#00BCD4);
+       cursor: pointer;
+       box-shadow: 0px 8px 10px -10px rgb(0, 0, 0);
+       transition-duration:0.1s ;
+    }
+    .btn2:hover{
+        box-shadow: 0px 0px 12px rgba(193, 40, 253, 0.692);
+    }
+    input:not([type="button"]):not([type="submit"]):not([type="reset"]):hover, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus, textarea:hover, textarea:focus, select:hover, select:focus {
+        border-color: #81256f;
+        box-shadow: none;
+    }
